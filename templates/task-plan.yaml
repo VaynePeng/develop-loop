@@ -1,0 +1,14 @@
+schemaVersion: 1
+tasks:
+  - id: replace-me
+    title: 替换为任务标题
+    objective: 描述这个任务交付的独立结果
+    dependsOn: []
+    allowedPaths:
+      - src/example
+    forbiddenPaths:
+      - src/unrelated
+    acceptanceCriteria:
+      - 描述可验证的验收标准
+    verifyCommands:
+      - pnpm typecheck

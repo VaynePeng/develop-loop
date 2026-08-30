@@ -1,0 +1,20 @@
+schemaVersion: 1
+name: develop-loop
+version: "1.0"
+maxRetries: 3
+
+workflows:
+  systemAnalysis:
+    file: system-analysis.yaml
+  development:
+    file: development.yaml
+
+finalVerify:
+  prompt: prompts/final-verify.md
+  template: templates/final-verify-report.yaml
+  requiredChecks:
+    - task-completion
+    - test-suite
+    - typecheck
+    - scope-integrity
+    - design-lock

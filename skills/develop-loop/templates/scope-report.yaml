@@ -1,0 +1,5 @@
+schemaVersion: 1
+result: passed
+changedPaths:
+  - src/example.ts
+summary: 所有业务改动均位于当前任务允许范围内

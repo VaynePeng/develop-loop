@@ -1,0 +1,6 @@
+schemaVersion: 1
+result: passed
+commands:
+  - command: pnpm typecheck
+    exitCode: 0
+    summary: 类型检查通过

@@ -1,0 +1,33 @@
+# OS
+.DS_Store
+Thumbs.db
+
+# Dependencies
+node_modules/
+
+# Build
+dist/
+*.tsbuildinfo
+*.tgz
+
+# Environment and secrets
+.env
+.env.*
+!.env.example
+
+# Logs and caches
+*.log
+pnpm-debug.log*
+.cache/
+coverage/
+
+# Editors
+.idea/
+*.swp
+*.swo
+
+# Runtime evidence if this repo is used as a target
+.develop-loop/
+
+# Local Codex / agent skill installs
+.agents/

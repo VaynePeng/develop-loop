@@ -1,0 +1,4 @@
+interface:
+  display_name: "系分研发循环"
+  short_description: "运行可断点续跑的系统分析与研发工作流"
+  default_prompt: "请使用 $develop-loop，根据我附上的需求启动或恢复一次系分研发流程。"

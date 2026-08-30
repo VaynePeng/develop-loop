@@ -1,0 +1,65 @@
+{
+  "name": "develop-loop",
+  "version": "0.1.0",
+  "description": "面向系分与可验证研发的企业级 Codex 软件开发生命周期循环编排器",
+  "scripts": {
+    "test": "vitest run",
+    "dev": "tsx src/cli.ts",
+    "sync:skill-assets": "node --import tsx scripts/sync-skill-assets.ts",
+    "prebuild": "pnpm run sync:skill-assets",
+    "build": "tsdown",
+    "postbuild": "node --import tsx scripts/verify-bundle.ts",
+    "predemo": "pnpm run build",
+    "demo": "node --import tsx scripts/run-demo.ts",
+    "typecheck": "tsc --noEmit",
+    "start": "node dist/cli.js",
+    "verify": "pnpm run typecheck && pnpm run test && pnpm run build"
+  },
+  "keywords": [
+    "codex",
+    "agent-skill",
+    "sdlc",
+    "system-analysis",
+    "development-workflow"
+  ],
+  "author": "VaynePeng",
+  "license": "ISC",
+  "private": true,
+  "type": "module",
+  "bin": {
+    "develop-loop": "./dist/cli.js"
+  },
+  "files": [
+    "dist/",
+    "skills/",
+    "LICENSE",
+    "README.md"
+  ],
+  "engines": {
+    "node": ">=20"
+  },
+  "dependencies": {
+    "commander": "^15.0.0",
+    "yaml": "^2.9.0",
+    "zod": "^4.4.3"
+  },
+  "devDependencies": {
+    "@types/node": "^26.4.0",
+    "tsdown": "^0.22.14",
+    "tsx": "^4.23.12",
+    "typescript": "^7.0.2",
+    "vitest": "^4.1.11"
+  },
+  "packageManager": "pnpm@10.32.1",
+  "types": "dist/index.d.ts",
+  "exports": {
+    ".": "./dist/index.js",
+    "./cli": "./dist/cli.js",
+    "./package.json": "./package.json"
+  },
+  "inlinedDependencies": {
+    "commander": "15.0.0",
+    "yaml": "2.9.0",
+    "zod": "4.4.3"
+  }
+}

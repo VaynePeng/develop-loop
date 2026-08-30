@@ -1,0 +1,16 @@
+schemaVersion: 1
+name: system-analysis
+prompt: prompts/system-analysis.md
+revisionPrompt: prompts/design-revision.md
+designTemplate: templates/design.md
+taskPlanTemplate: templates/task-plan.yaml
+requiredDesignSections:
+  - 需求概述
+  - 现状分析
+  - 目标架构
+  - 数据模型
+  - 接口设计
+  - 兼容性与迁移
+  - 安全与风险
+  - 测试策略
+  - 研发任务拆分

@@ -1,0 +1,18 @@
+schemaVersion: 1
+name: development
+stages:
+  - id: PLAN
+    prompt: prompts/task-plan.md
+    artifactRequired: true
+  - id: IMPLEMENT
+    prompt: prompts/task-implement.md
+    artifactRequired: true
+  - id: VERIFY
+    prompt: prompts/task-verify.md
+    artifactRequired: true
+  - id: REVIEW
+    prompt: prompts/task-review.md
+    artifactRequired: true
+  - id: SCOPE_CHECK
+    prompt: prompts/task-scope-check.md
+    artifactRequired: true
